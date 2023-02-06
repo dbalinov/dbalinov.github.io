@@ -1,0 +1,75 @@
+// import fs from 'fs'
+// import matter from 'gray-matter'
+// import Markdown from 'markdown-to-jsx'
+// import getPostMetadata from '@/components/getPostMetadata'
+
+// const getPostContent = (slug: string) => {
+//   const folder = "posts/"
+//   const file = `${folder}${slug}.md`;
+//   const content = fs.readFileSync(file, 'utf8');
+//   const matterResult = matter(content);
+
+//   return matterResult;
+// }
+
+// export const generateStaticParams = async () => {
+//   const posts = getPostMetadata();
+//   return posts.map(post => ({ slug: post.slug }))
+// }
+
+// const PostPage = (props: any) => {
+//   const slug = props.params.slug;
+//   const post = getPostContent(slug);
+
+//   return (
+//     <article>
+//       <h1>{post.data.title}</h1>
+//       <div  className="prose lg:prose-xl">
+//         <Markdown>{post.content}</Markdown>
+//       </div>
+//     </article>
+//   )
+// }
+
+// export default PostPage;
+
+
+import fs from 'fs';
+import matter from 'gray-matter';
+// import md from 'markdown-it';
+import Markdown from 'markdown-to-jsx'
+
+export async function getStaticPaths() {
+  const files = fs.readdirSync('posts');
+  const paths = files.map((fileName) => ({
+    params: {
+      slug: fileName.replace('.md', '')
+    }
+  }));
+  return {
+    paths,
+    fallback: false
+  };
+}
+
+export async function getStaticProps({ params: { slug } }) {
+  const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
+  const { data: frontmatter, content } = matter(fileName);
+  return {
+    props: {
+      frontmatter,
+      content
+    },
+  };
+}
+
+export default function PostPage({ frontmatter, content }) {
+  return (
+    <div className='prose mx-auto'>
+      <h1>{frontmatter.title}</h1>
+      <Markdown>
+        {content}
+      </Markdown>
+    </div>
+  );
+}
