@@ -36,7 +36,7 @@
 
 import fs from 'fs';
 import matter from 'gray-matter';
-// import md from 'markdown-it';
+import Image from 'next/image';
 import Markdown from 'markdown-to-jsx'
 
 export async function getStaticPaths() {
@@ -65,11 +65,45 @@ export async function getStaticProps({ params: { slug } }) {
 
 export default function PostPage({ frontmatter, content }) {
   return (
-    <div className='prose mx-auto'>
-      <h1>{frontmatter.title}</h1>
-      <Markdown>
-        {content}
-      </Markdown>
+    <div className="mt-20">
+      <div class="flex flex-col justify-center items-center">
+        <div class="text-center w-full md:w-7/12 m-auto">
+          <p class="text-sm md:text-base font-light text-gray-500 w-10/12 m-auto mt-10 mb-5">
+            {frontmatter.date}
+            {/* Jan 20, 2022 */}
+          </p>
+          <h1 class="font-bold text-3xl font-cal md:text-6xl mb-10 text-gray-800">
+            {frontmatter.title}
+          </h1>
+          <p class="text-md md:text-lg text-gray-600 w-10/12 m-auto">
+            {frontmatter.description}
+          </p>
+        </div>
+        <a href="https://twitter.com/steventey" rel="noreferrer" target="_blank">
+          <div class="my-8">
+            <div class="relative w-8 h-8 md:w-12 md:h-12 rounded-full overflow-hidden inline-block align-middle">
+              {/* <img alt="Steven Tey" srcset="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F28986134%3Fv%3D4&amp;w=96&amp;q=75 1x, /_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F28986134%3Fv%3D4&amp;w=256&amp;q=75 2x" src="/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F28986134%3Fv%3D4&amp;w=256&amp;q=75" width="80" height="80" decoding="async" data-nimg="1" class="duration-700 ease-in-out grayscale-0 blur-0 scale-100" loading="lazy" style="color: transparent;"> */}
+            </div>
+            <div class="inline-block text-md md:text-lg align-middle ml-3">
+              by <span class="font-semibold">{frontmatter.author}</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="relative h-80 md:h-150 w-full max-w-screen-lg lg:w-2/3 md:w-5/6 m-auto mb-10 md:mb-20 md:rounded-2xl overflow-hidden">
+        <Image
+          width={1200}
+          height={630}
+          alt={frontmatter.title}
+          src={frontmatter.featured_image}
+          className="w-full h-full object-cover duration-700 ease-in-out grayscale-0 blur-0 scale-100"
+        />
+      </div>
+      <article class="w-11/12 sm:w-3/4 m-auto prose prose-md sm:prose-lg">
+        <Markdown className="prose">
+          {content}
+        </Markdown>
+      </article>
     </div>
   );
 }
