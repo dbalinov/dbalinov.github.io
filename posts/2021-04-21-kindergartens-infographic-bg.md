@@ -2,7 +2,7 @@
 title: Прием в общински детски ясли и градини в София - инфографика
 date: '2021-04-21T00:00:00'
 description: Интересни диаграми и интерактивни карти за свободни места и брой кандидатстващи деца в детски ясли и градини в гр. София.     
-featured_image: /assets/img/pages/Sofia-kindergarten-admission-map.png
+featured_image: /pages/kindergartens-infographic/Sofia-kindergarten-admission-map.png
 author: Магдалена Петрова
 lang: bg
 ---
@@ -12,7 +12,7 @@ lang: bg
 Това провери Магдалена Петрова - доброволец в "Данни за добро" и Data Scientist в отпуск по майчинство.
 <br/><br/>
 
-[ ![](/assets/img/pages/Sofia-kindergarten-admission-probability-infographic-19.04.2021-small.png) ](/assets/img/pages/Sofia-kindergarten-admission-probability-infographic-19.04.2021-large.png)
+[ ![](/pages/kindergartens-infographic/Sofia-kindergarten-admission-probability-infographic-19.04.2021-small.png) ](/pages/kindergartens-infographic/Sofia-kindergarten-admission-probability-infographic-19.04.2021-large.png)
 
 <!--
 ### Интерактивни карти
@@ -29,11 +29,11 @@ lang: bg
 ##### (допълнение от 14.05.2021)
 Първата седмица на месец май 2021 г. беше белязана от много празници, но за десетки хиляди родители в София тя бе и време на трескави пресмятания на проценти и вероятности. 7 май беше крайният срок за кандидатстване и подреждания на желания за записване на деца в детски заведения през електронната система на Столична община - ИСОДЗ, а резултатите трябваше да бъдат обявени на 14 май. Тъй като традиционно кандидатстващите са с хиляди повече от обявените места, тези няколко дни са напрегнато време за родителите на деца с различен шанс за успех при класирането. Затова и изненадващата новина от 13 май за повторно отваряне на ИСОДЗ и изместване на сроковете беше посрещната с много негативни емоции. Причината, с която беше обяснено това, беше коригиране на критерий "адрес, който родителят иска да използва при класирането". Освен коригирането на данни, обаче, повторното "отключване" на системата даде възможност и за регистриране на нови кандидатури. Имаше ли такива през първия ден и ако да, колко бяха те? На тези въпроси дава отговор новата визуализация на "Данни за добро" България.
 <br/><br/>
-[ ![](/assets/img/pages/Sofia-kindergarten-reopening-of-system-13.05.2021.png) ](/assets/img/pages/Sofia-kindergarten-reopening-of-system-13.05.2021.png)
+[ ![](/pages/kindergartens-infographic/Sofia-kindergarten-reopening-of-system-13.05.2021.png) ](/pages/kindergartens-infographic/Sofia-kindergarten-reopening-of-system-13.05.2021.png)
 
 ### Как изглеждат крайните данни след заключване на системата ИСОДЗ на 15.05.2021?
 ##### (допълнение от 16.05.2021)
-[ ![](/assets/img/pages/Sofia-kindergarten-system-closed-on-15.05.2021.png) ](/assets/img/pages/Sofia-kindergarten-system-closed-on-15.05.2021.png)
+[ ![](/pages/kindergartens-infographic/Sofia-kindergarten-system-closed-on-15.05.2021.png) ](/pages/kindergartens-infographic/Sofia-kindergarten-system-closed-on-15.05.2021.png)
 
 ### За „Данни за добро”
 „Данни за добро” е сдружение с нестопанска цел определено за осъществяване на общественополезна дейност. Ние създаваме общност от специалисти и съмишленици с опит в работата с данни, които да развиват значими за обществото проекти, както и да подпомагат активно организациите от неправителствения сектор да се справят с предизвикателствата чрез извличането на знание от данните.

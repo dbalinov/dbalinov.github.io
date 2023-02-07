@@ -2,7 +2,7 @@
 title: What is Data for Good Bulgaria
 date: '2021-04-08T00:00:00'
 description: We are Data for Good - Bulgaria. Our goal is to support the civil sector in Bulgaria by providing services related to data processing and data analysis.
-featured_image: /assets/img/pages/color-graph.png
+featured_image: /pages/dfg-mission/color-graph.png
 author: Nikola Tulechki
 lang: en
 ---

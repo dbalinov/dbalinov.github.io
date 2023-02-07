@@ -2,59 +2,41 @@
 title:  Избори 2021 - Рaзпределение на мандати без рисков вот
 date: '2021-05-27T00:00:00'
 description: Симулация на окончателното разпределение на мандати след елиминиране на секциите с предполагаем рисков вот.      
-featured_image: /assets/img/pages/Easily-accessible-linked-open-elections-data.png
+featured_image: /pages/election-mandates/Easily-accessible-linked-open-elections-data.png
 author: Никола Тулечки
 lang: bg
 ---
 
-<!-- ![](/assets/img/pages/risky_mandates_2021.png) -->
-
-<div className="chart-container">
-  <div id="vis"></div>
-</div>
-
-<script type="text/javascript">
-var vlSpec = {
-    $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
-    description: 'рисков вот - разлика в мандати по партия',
-    data: {
-      values: [
-        {party: 'БСП', mandates: 3, color: 'rgba(204, 0, 0, 0.7)'},
-        {party: 'ГЕРБ', mandates: 2, color: 'rgba(17, 85, 204, 0.7)'},
-        {party: 'ДБ', mandates: 1, color: 'rgba(153, 0, 255, 0.7)'},
-        {party: 'ДПС', mandates: -7, color: 'rgba(159, 197, 232, 0.7)'},
-        {party: 'ИСМВ', mandates: 0.2, color: 'rgba(235, 200, 21, 0.7)'},
-        {party: 'ИТН', mandates: 1, color: 'rgba(70, 189, 198, 0.7)'}
-      ]
-    },
-    width: 600,
-    height: 250,
-    mark: 'bar',
-    title: {
-      text: {"signal": "'рисков вот - разлика в мандати по партия'"},
-      anchor: 'start',
-      frame: 'group',
-      titleFontSize: 15
-    },
-    encoding: {
-        x: {field: 'party', type: 'nominal', title: '', axis: { labelAngle: 0 } },
-        y: {field: 'mandates', type: 'quantitative', title: 'Мандати', axis: { titleFontWeight: 'normal', titleFontSize: 14 }, scale: { domainMax: 4, domainMin: -8 } },
-        color: {field: 'color', type: 'nominal', scale: null}
-    }
-};
-
-function init() {
-    var containers = document.getElementsByClassName('chart-container');
-    if (containers.length) {
-        vlSpec.width = containers[0].offsetWidth - 80;
-    }
-
-    vegaEmbed('#vis', vlSpec);
+```vega-lite
+{
+  $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+  description: 'рисков вот - разлика в мандати по партия',
+  data: {
+    values: [
+      {party: 'БСП', mandates: 3, color: 'rgba(204, 0, 0, 0.7)'},
+      {party: 'ГЕРБ', mandates: 2, color: 'rgba(17, 85, 204, 0.7)'},
+      {party: 'ДБ', mandates: 1, color: 'rgba(153, 0, 255, 0.7)'},
+      {party: 'ДПС', mandates: -7, color: 'rgba(159, 197, 232, 0.7)'},
+      {party: 'ИСМВ', mandates: 0.2, color: 'rgba(235, 200, 21, 0.7)'},
+      {party: 'ИТН', mandates: 1, color: 'rgba(70, 189, 198, 0.7)'}
+    ]
+  },
+  width: 600,
+  height: 250,
+  mark: 'bar',
+  title: {
+    text: {"signal": "'рисков вот - разлика в мандати по партия'"},
+    anchor: 'start',
+    frame: 'group',
+    titleFontSize: 15
+  },
+  encoding: {
+      x: {field: 'party', type: 'nominal', title: '', axis: { labelAngle: 0 } },
+      y: {field: 'mandates', type: 'quantitative', title: 'Мандати', axis: { titleFontWeight: 'normal', titleFontSize: 14 }, scale: { domainMax: 4, domainMin: -8 } },
+      color: {field: 'color', type: 'nominal', scale: null}
+  }
 }
-
-init();
-window.addEventListener('resize', init);
-</script>
+```
 
 ### Методология 
 

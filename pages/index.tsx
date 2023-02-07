@@ -28,8 +28,6 @@ import Link from 'next/link';
 //   )
 // }
 
-
-
 export async function getStaticProps() {
 
   const folder = "posts/"
@@ -47,7 +45,7 @@ export async function getStaticProps() {
     };
   });
 
-  // const markdownPosts = files.filter((file) => file.endsWith(".md"))
+  // const markdownPosts = files.filter(file => file.endsWith(".md"))
 
   // const posts = markdownPosts.map((fileName) => {
   //   const fileContents = fs.readFileSync(`posts/${fileName}`, 'utf8')

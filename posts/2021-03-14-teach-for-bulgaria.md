@@ -9,7 +9,7 @@ lang: en
 
 #### About Teach for Bulgaria
 
-![](/assets/img/partner-logos/tfb/Zaedno_v_chas_EN-Logo_RGB_raster_transparency.png)
+![](/pages/teach-for-bulgaria/Zaedno_v_chas_EN-Logo_RGB_raster_transparency.png)
 
 [Teach for Bulgaria](https://zaednovchas.bg/en/) work towards positive change in education in Bulgaria by recruiting, training, and developing new teachers, supports educational teams  and builds partnerships for the introduction of good practices in the education system in the country.
 
@@ -28,7 +28,7 @@ It took us 4 weeks to explore the data, analyse the problem and produce a predic
 Our team crunched the data looking into two different hypotheses. On the one hand, we estimated the shortage of teachers, and on the other hand, calculated the number of teachers who will reach retirement age.
 
 ##### What was tricky in this project?
-<img align="right" src="/assets/img/pages/what-we-did-Teach-for-Bulgaria-Data-for-Good-casestudy.PNG" width="400">In the process of analysing the data we encountered several problems. Although Teach for Bulgaria had comprehensive data, it was scattered. For example, one data set represented the number of teachers by subject, another the number of teachers by age, but none of them contained the number of teachers by subject and age that we needed in order to analyze the issue of teachers reaching retirement age. A separate difficulty was the presentation of the age of teachers as a range - we had the number of teachers aged 57-62 years, but we needed an exact age and gender to match that against the conditions for retirement age for teachers.
+<img align="right" src="/pages/teach-for-bulgaria/what-we-did-Teach-for-Bulgaria-Data-for-Good-casestudy.PNG" width="400">In the process of analysing the data we encountered several problems. Although Teach for Bulgaria had comprehensive data, it was scattered. For example, one data set represented the number of teachers by subject, another the number of teachers by age, but none of them contained the number of teachers by subject and age that we needed in order to analyze the issue of teachers reaching retirement age. A separate difficulty was the presentation of the age of teachers as a range - we had the number of teachers aged 57-62 years, but we needed an exact age and gender to match that against the conditions for retirement age for teachers.
 
 ##### How did we solve the problem?
 From the very beginning, Data for Good Bulgaria worked closely with Teach for Bulgaria and communicated our ideas for solving the problem. We discussed our approach and made sure we are on the right track.
@@ -44,7 +44,7 @@ We used tools such as Graph DB, Python and Jupyter for delivering the project, w
 * Documented the analysis process, which ensured reusability of the code in future analysis.
 <br/><br/>
 <p align="center">
-<img src="/assets/img/pages/age-composition-of-teachers-in-Sofia-region-Teach-for-Bulgaria-Data-for-Good-casestudy.png"
+<img src="/pages/teach-for-bulgaria/age-composition-of-teachers-in-Sofia-region-Teach-for-Bulgaria-Data-for-Good-casestudy.png"
      alt="Age composition of teachers in Sofia region Teach for Bulgaria & Data for Good casestudy"
      style="float: left; margin-right: 10px;" />
 </p>

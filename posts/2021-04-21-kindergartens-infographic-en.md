@@ -2,7 +2,7 @@
 title: Admission to municipal kindergartens and nurseries in Sofia - infographic
 date: '2021-04-21T00:00:00'
 description: Informative diagrams and interactive maps about the free spaces and number of applicant children for kindergartens and nurseries in Sofia.
-featured_image: /assets/img/pages/Sofia-kindergarten-admission-map.png
+featured_image: /pages/kindergartens-infographic/Sofia-kindergarten-admission-map.png
 author: Magdalena Petrova
 lang: en
 ---
@@ -11,7 +11,7 @@ The standard maximum number of points by general criteria this year is 13. Howev
 This is what Magdalena Petrova, a volunteer in Data for Good - Bulgaria and a Data Scientist in maternity leave, decided to check. 
 <br/><br/>
 
-[ ![](/assets/img/pages/Sofia-kindergarten-admission-probability-infographic-19.04.2021-small.png) ](/assets/img/pages/Sofia-kindergarten-admission-probability-infographic-19.04.2021-large.png)
+[ ![](/pages/kindergartens-infographic/Sofia-kindergarten-admission-probability-infographic-19.04.2021-small.png) ](/pages/kindergartens-infographic/Sofia-kindergarten-admission-probability-infographic-19.04.2021-large.png)
 
 <!--
 ### Interactive maps

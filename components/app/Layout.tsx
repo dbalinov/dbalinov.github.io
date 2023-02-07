@@ -5,6 +5,14 @@ import { useRouter } from "next/router";
 import React from "react";
 import Header from './Header'
 import Footer from './Footer'
+
+// import '@/styles/globals.css'
+// import styles from '@/styles/Home.module.css'
+// import Link from 'next/link'
+import { Sofia_Sans } from '@next/font/google'
+
+const sofiaSans = Sofia_Sans({ subsets: ['latin', 'cyrillic'] }) //{ subsets: ['latin'] })
+
 // import Loader from "./Loader";
 // import useRequireAuth from "../../lib/useRequireAuth";
 
@@ -135,7 +143,7 @@ export default function Layout({ children }: any) {
           </div>
         )}
         {/* <div className="pt-28">{children}</div> */}
-        <main className='container mx-auto flex-1'>{children}</main>
+        <main className={`${sofiaSans.className} container mx-auto flex-1`}>{children}</main>
         <Footer />
       </div>
     </>
@@ -143,12 +151,7 @@ export default function Layout({ children }: any) {
 }
 
 
-// import '@/styles/globals.css'
-// import styles from '@/styles/Home.module.css'
-// import Link from 'next/link'
-// import { Sofia_Sans } from '@next/font/google'
 
-// const sofiaSans = Sofia_Sans({ subsets: ['latin'] })
 
 // const header = (
 //   <header>
