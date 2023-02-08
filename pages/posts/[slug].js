@@ -1,6 +1,8 @@
-// import fs from 'fs'
-// import matter from 'gray-matter'
-// import Markdown from 'markdown-to-jsx'
+import fs from 'fs';
+import matter from 'gray-matter';
+import Image from 'next/image';
+import Markdown from '@/components/Markdown';
+import { format, parseISO } from 'date-fns'
 // import getPostMetadata from '@/components/getPostMetadata'
 
 // const getPostContent = (slug: string) => {
@@ -20,26 +22,7 @@
 // const PostPage = (props: any) => {
 //   const slug = props.params.slug;
 //   const post = getPostContent(slug);
-
-//   return (
-//     <article>
-//       <h1>{post.data.title}</h1>
-//       <div  className="prose lg:prose-xl">
-//         <Markdown>{post.content}</Markdown>
-//       </div>
-//     </article>
-//   )
 // }
-
-// export default PostPage;
-
-
-import fs from 'fs';
-import matter from 'gray-matter';
-import Image from 'next/image';
-import Markdown from 'markdown-to-jsx'
-import { format, parseISO } from 'date-fns'
-import Code from '@/components/Code'
 
 export async function getStaticPaths() {
   const files = fs.readdirSync('posts');
@@ -91,7 +74,7 @@ export default function PostPage({ frontmatter, content }) {
           </div>
         </a>
       </div>
-      <div className="relative h-80 md:h-150 w-full max-w-screen-lg lg:w-2/3 md:w-5/6 m-auto mb-10 md:mb-20 md:rounded-2xl overflow-hidden">
+      <div className="relative h-104 md:h-158 w-full max-w-screen-lg lg:w-2/3 md:w-5/6 m-auto mb-10 md:mb-20 md:rounded-2xl overflow-hidden">
         <Image
           width={1200}
           height={630}
@@ -101,21 +84,7 @@ export default function PostPage({ frontmatter, content }) {
         />
       </div>
       <article className="w-11/12 sm:w-3/4 m-auto prose prose-md sm:prose-lg">
-        <Markdown
-          className="prose"
-        options={{
-          overrides: {
-            'code': {
-              component: Code,
-              props: {
-                // className: 'not-prose',
-
-              }
-            }
-          }
-        }}>
-          {content}
-        </Markdown>
+        <Markdown className="prose lg:prose-xl">{content}</Markdown>
       </article>
     </div>
   );

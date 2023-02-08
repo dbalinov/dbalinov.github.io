@@ -2,7 +2,7 @@
 title:  Парламентарни избори Октомври 2022 - преференциален вот по партия
 date: '2022-10-27T00:00:00'
 description: Графики на преференциалния вот на парламентарните избори.
-featured_image: /assets/img/elections.png
+featured_image: /pages/democracy/elections.png
 author: Никола Тулечки
 lang: bg
 ---
@@ -60,7 +60,7 @@ lang: bg
   <div id="vis_2022_bv"></div>
 </div>
 
-Графиките и производните им данни могат да се използват съгласно условията на отворения лиценз [CC-BY](https://creativecommons.org/licenses/by/2.0/){:target="_blank"}.
+Графиките и производните им данни могат да се използват съгласно условията на отворения лиценз [CC-BY](https://creativecommons.org/licenses/by/2.0/).
 
 <script type="text/javascript">
 var vlSpec = {
@@ -106,45 +106,45 @@ function init() {
     var containers = document.getElementsByClassName('chart-container');
  
     vlSpec_2022_gerb=JSON.parse(JSON.stringify(vlSpec));
-    vlSpec_2022_gerb.title = "КП ГЕРБ СДС  - Разпределение на преференициалния вот - 02.10.2022" ;
+    vlSpec_2022_gerb.title = "КП ГЕРБ СДС  - Разпределение на преференициалния вот - 02.10.2022";
     vlSpec_2022_gerb.data.url = urlbase+"gerb_2022.csv" ;
     vlSpec_2022_gerb.mark.color = "#2c92e6";
     vegaEmbed('#vis_2022_gerb', vlSpec_2022_gerb);
 
     vlSpec_2022_pp=JSON.parse(JSON.stringify(vlSpec));
-    vlSpec_2022_pp.title = "ПП ПП  - Разпределение на преференициалния вот - 02.10.2022" ;
+    vlSpec_2022_pp.title = "ПП ПП  - Разпределение на преференициалния вот - 02.10.2022";
     vlSpec_2022_pp.data.url = urlbase+"pp_2022.csv" ;
     vlSpec_2022_pp.mark.color = "#1e0985";
     vegaEmbed('#vis_2022_pp', vlSpec_2022_pp);
-    
+
     vlSpec_2022_dps=JSON.parse(JSON.stringify(vlSpec));
-    vlSpec_2022_dps.title = "ДПС  - Разпределение на преференициалния вот - 02.10.2022" ;
-    vlSpec_2022_dps.data.url = urlbase+"dps_2022.csv" ;
-    vlSpec_2022_dps.mark.color = "#0d518898";  
+    vlSpec_2022_dps.title = "ДПС  - Разпределение на преференициалния вот - 02.10.2022";
+    vlSpec_2022_dps.data.url = urlbase+"dps_2022.csv";
+    vlSpec_2022_dps.mark.color = "#0d518898";
      vegaEmbed('#vis_2022_dps', vlSpec_2022_dps);
 
     vlSpec_2022_vuz=JSON.parse(JSON.stringify(vlSpec));
     vlSpec_2022_vuz.title = "Възраждане  - Разпределение на преференициалния вот - 02.10.2022" ;
-    vlSpec_2022_vuz.data.url = urlbase+"vuz_2022.csv" ;
-    vlSpec_2022_vuz.mark.color = "#7b5804";  
+    vlSpec_2022_vuz.data.url = urlbase+"vuz_2022.csv";
+    vlSpec_2022_vuz.mark.color = "#7b5804";
     vegaEmbed('#vis_2022_vuz', vlSpec_2022_vuz);
 
     vlSpec_2022_bsp=JSON.parse(JSON.stringify(vlSpec));
     vlSpec_2022_bsp.title = "БСП  - Разпределение на преференициалния вот - 02.10.2022" ;
-    vlSpec_2022_bsp.data.url = urlbase+"bsp_2022.csv" ;
-    vlSpec_2022_bsp.mark.color = "#BB3214";  
+    vlSpec_2022_bsp.data.url = urlbase+"bsp_2022.csv";
+    vlSpec_2022_bsp.mark.color = "#BB3214";
     vegaEmbed('#vis_2022_bsp', vlSpec_2022_bsp);
 
     vlSpec_2022_db=JSON.parse(JSON.stringify(vlSpec));
-    vlSpec_2022_db.title = "ДБ  - Разпределение на преференициалния вот - 02.10.2022" ;
-    vlSpec_2022_db.data.url = urlbase+"db_2022.csv" ;
-    vlSpec_2022_db.mark.color = "#DD06F4";  
+    vlSpec_2022_db.title = "ДБ  - Разпределение на преференициалния вот - 02.10.2022";
+    vlSpec_2022_db.data.url = urlbase+"db_2022.csv";
+    vlSpec_2022_db.mark.color = "#DD06F4";
     vegaEmbed('#vis_2022_db', vlSpec_2022_db);
     
     vlSpec_2022_bv=JSON.parse(JSON.stringify(vlSpec));
-    vlSpec_2022_bv.title = "БВ  - Разпределение на преференициалния вот - 02.10.2022" ;
-    vlSpec_2022_bv.data.url = urlbase+"bv_2022.csv" ;
-    vlSpec_2022_bv.mark.color = "#770C03";  
+    vlSpec_2022_bv.title = "БВ  - Разпределение на преференициалния вот - 02.10.2022";
+    vlSpec_2022_bv.data.url = urlbase+"bv_2022.csv";
+    vlSpec_2022_bv.mark.color = "#770C03";
     vegaEmbed('#vis_2022_bv', vlSpec_2022_bv);
 }
 
