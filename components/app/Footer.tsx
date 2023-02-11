@@ -1,5 +1,5 @@
-import Link from "next/link"
-import Image from 'next/image'
+import Link from "@/components/Link"
+// import Image from 'next/image'
 
 export default function Footer() {
   return <footer className="p-4 bg-white sm:p-6 mt-8">
@@ -7,7 +7,7 @@ export default function Footer() {
     <div className='container mx-auto'>
       <div className="sm:flex sm:items-center sm:justify-between">
         <Link href="/" className="flex items-center mb-4 sm:mb-0">
-          <Image src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Data for Good - Bulgaria Logo" />
+          {/* <Image src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Data for Good - Bulgaria Logo" /> */}
           <span className="self-center text-2xl font-semibold whitespace-nowrap">Data for Good - Bulgaria</span>
         </Link>
         <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0">
@@ -21,7 +21,7 @@ export default function Footer() {
             <a href="#" className="mr-4 hover:underline md:mr-6 ">Licensing</a>
           </li>
           <li>
-            <a href="#" className="hover:underline">Contact</a>
+            <Link href="/contact" className="hover:underline">Contact</Link>
           </li>
       </ul>
     </div>
@@ -44,7 +44,7 @@ export default function Footer() {
               <span className="sr-only">GitHub account</span>
             </a>
             <Link href="#" className="text-gray-500 hover:text-gray-900">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clipRule="evenodd" /></svg>
+              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"  aria-hidden="true"><path fillRule="evenodd" d="M19.75 5.39v13.22a1.14 1.14 0 0 1-1.14 1.14H5.39a1.14 1.14 0 0 1-1.14-1.14V5.39a1.14 1.14 0 0 1 1.14-1.14h13.22a1.14 1.14 0 0 1 1.14 1.14zM8.81 10.18H6.53v7.3H8.8v-7.3zM9 7.67a1.31 1.31 0 0 0-1.3-1.32h-.04a1.32 1.32 0 0 0 0 2.64A1.31 1.31 0 0 0 9 7.71v-.04zm8.46 5.37c0-2.2-1.4-3.05-2.78-3.05a2.6 2.6 0 0 0-2.3 1.18h-.07v-1h-2.14v7.3h2.28V13.6a1.51 1.51 0 0 1 1.36-1.63h.09c.72 0 1.26.45 1.26 1.6v3.91h2.28l.02-4.43z"></path></svg>
               <span className="sr-only">Linked in account</span>
             </Link>
         </div>

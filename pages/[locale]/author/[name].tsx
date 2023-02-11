@@ -3,6 +3,7 @@ import matter from 'gray-matter';
 import Image from 'next/image';
 import Markdown from '@/components/Markdown';
 import { format, parseISO } from 'date-fns'
+// import { en, bg } from 'date-fns/locale'
 // import getPostMetadata from '@/components/getPostMetadata'
 
 // const getPostContent = (slug: string) => {
@@ -25,36 +26,47 @@ import { format, parseISO } from 'date-fns'
 // }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync('posts');
-  const paths = files.map((fileName) => ({
-    params: {
-      slug: fileName.replace('.md', '')
+  const paths = [];
+
+  const posts = fs.readdirSync('posts');
+  for (const fileName of posts) {
+    for (const locale of ['bg', 'en']) {
+      paths.push({
+        params: {
+          locale,
+          name: fileName.replace('.md', '')
+        }
+      })
     }
-  }));
+  }
+
   return {
     paths,
     fallback: false
   };
 }
 
-export async function getStaticProps({ params: { slug } }) {
-  const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
+export async function getStaticProps({ params: { locale, name } }: any) {
+  const fileName = fs.readFileSync(`posts/${name}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
   return {
     props: {
+      locale,
       frontmatter,
       content
     },
   };
 }
 
-export default function PostPage({ frontmatter, content }) {
+export default function PostPage({ frontmatter, content,locale }: any) {
+  console.log(locale)
+
   return (
     <div className="mt-16">
       <div className="flex flex-col justify-center items-center">
         <div className="text-center w-full md:w-7/12 m-auto">
           <p className="text-sm md:text-base font-light text-gray-500 w-10/12 m-auto mt-10 mb-5">
-            { format(parseISO(frontmatter.date), 'dd.MM.yyyy') }
+            { format(parseISO(frontmatter.date), 'dd MMMM yyyy') }
           </p>
           <h1 className="font-bold text-3xl font-cal md:text-6xl mb-10 text-gray-800">
             {frontmatter.title}
