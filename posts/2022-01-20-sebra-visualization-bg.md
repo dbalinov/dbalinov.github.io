@@ -2,7 +2,7 @@
 title:  Системата за електронни бюджетни плащания СЕБРА - визуализация
 date: '2022-01-20T00:00:00'
 description: Визуализация на направените плащания през централизираната система за обслужване на сметки на бюджетни организации.     
-featured_image: /assets/img/pages/sebra-21st-anniversary.png
+featured_image: /pages/sebra-visualization/sebra-21st-anniversary.png
 author: Никола Тулечки
 lang: bg
 ---
@@ -25,16 +25,16 @@ lang: bg
 Приложението разполага с няколко раздела с визуализации. Между тях се превключва чрез този панел:
 
 [
-  ![Раздели с визуализации](../../assets/img/sebra/sections.png)
-](../../assets/img/sebra/sections.png){: .spotlight}
+  ![Раздели с визуализации](/pages/sebra/sections.png)
+](/pages/sebra/sections.png){: .spotlight}
 
 ### Обобщение
 
 Раздел Обобщение е визуализация, която показва относителното количество изхарчени средства по институции. Цветовете отговарят на типа институция. Размерът на правоъгълниците е пропорционален на сумата на плащането. Мащабът е динамичен и се настройва автоматично спрямо диапазона на сумите. 
 
 [
-  ![img.png](../../assets/img/sebra/obobshtenie.png)
-](../../assets/img/sebra/obobshtenie.png){: .spotlight}
+  ![img.png](/pages/sebra/obobshtenie.png)
+](/pages/sebra/obobshtenie.png){: .spotlight}
 
 *Пример: Сравнение на разходите за 2021 г. на висшите училища и БАН (в синьо), на обществените медии (в жълто) и на Народното събрание (в червено).*
 
@@ -43,8 +43,8 @@ lang: bg
 Раздел Хронология позволява да се сравнят разходите на дадена институция или набор институции на месечна база между отделните години. 
 
 [
-  ![img.png](../../assets/img/sebra/hronologia.png)
-](../../assets/img/sebra/hronologia.png){: .spotlight}
+  ![img.png](/pages/sebra/hronologia.png)
+](/pages/sebra/hronologia.png){: .spotlight}
 *Пример: Разходите на МВР за 2019 г., 2020 г. и 2021 г.*
 
 ### Календар
@@ -53,8 +53,8 @@ lang: bg
 Наситеността на оцветяването на отделните дни е пропорционално на сумата на плащанията извършени през съответния ден.
 
 [
-  ![img.png](../../assets/img/sebra/kalendar.png)
-](../../assets/img/sebra/kalendar.png){: .spotlight}
+  ![img.png](/pages/sebra/kalendar.png)
+](/pages/sebra/kalendar.png){: .spotlight}
 *Пример: БНТ е извършила едно много голямо плащане на 26.04.2021 г.*
 
 ### Месечен Преглед
@@ -63,8 +63,8 @@ lang: bg
 Освен общата сума е показана и разбивка по вид плащане.
 
 [
-  ![img.png](../../assets/img/sebra/mesechen.png)
-](../../assets/img/sebra/mesechen.png){: .spotlight}
+  ![img.png](/pages/sebra/mesechen.png)
+](/pages/sebra/mesechen.png){: .spotlight}
 *Пример: На графиката виждаме плащанията за трите обществени медии за месец януари 2022 г..*
 
 ### Сравнителна Хронология
@@ -72,8 +72,8 @@ lang: bg
 Сравнителната хронология позволява лесно съпоставяне на разходите във времето на няколко избрани институции.
 
 [
-  ![img.png](../../assets/img/sebra/srav_hronologia.png)
-](../../assets/img/sebra/srav_hronologia.png){: .spotlight}
+  ![img.png](/pages/sebra/srav_hronologia.png)
+](/pages/sebra/srav_hronologia.png){: .spotlight}
 *Пример: Разходите на 3 медицински университета през последните 3 години*
 
 ### Сравнение на Институции 
@@ -81,8 +81,8 @@ lang: bg
 Сравнението на институции позволява да се съпоставят сумите и видовете плащания на две институции за даден период от време.
 
 [
-  ![img.png](../../assets/img/sebra/srav_institucii.png)
-](../../assets/img/sebra/srav_institucii.png){: .spotlight}
+  ![img.png](/pages/sebra/srav_institucii.png)
+](/pages/sebra/srav_institucii.png){: .spotlight}
 *Пример: Сравнение на рaзходите на КЗЛД и КПКОНПИ за 2021 г. по вид плащане*
 
 ## Настройки на визуализациите
@@ -94,8 +94,8 @@ lang: bg
 Основният контролен панел позволява филтриране на визуализацията по следните четири критерия:
 
 [
-  ![img.png](../../assets/img/sebra/panel.png)
-](../../assets/img/sebra/panel.png){: .spotlight}
+  ![img.png](/pages/sebra/panel.png)
+](/pages/sebra/panel.png){: .spotlight}
 
 Критериите избрани на панела важат единствено за конкретния раздел на визуализация, който е избран.
 При нужда да се визуализира една и съща селекция чрез няколко визуализации, е нужно да се повторят критериите на всяка една от тях.
@@ -108,13 +108,13 @@ lang: bg
 * Възможно е да се изключи даден елемент (негативна селекция) като първо се избере и после се щракне върху `exclude` на pop-up прозореца, който се появява. 
 
 [
-  ![img.png](../../assets/img/sebra/kalendar_select_1.png)
-](../../assets/img/sebra/kalendar_select_1.png){: .spotlight}
+  ![img.png](/pages/sebra/kalendar_select_1.png)
+](/pages/sebra/kalendar_select_1.png){: .spotlight}
 *Пример 1: Плащания по институции на една конкретна дата.*
 
 [
-  ![img.png](../../assets/img/sebra/kalendar_select_2.png)
-](../../assets/img/sebra/kalendar_select_2.png){: .spotlight}
+  ![img.png](/pages/sebra/kalendar_select_2.png)
+](/pages/sebra/kalendar_select_2.png){: .spotlight}
 *Пример 2: Плащанията на НОИ се извършват на седмо число всеки месец.*
 
 ### Долен панел
@@ -122,8 +122,8 @@ lang: bg
 Долният панел съдържа няколко полезни функции:
 
 [
-  ![img.png](../../assets/img/sebra/bottom_controls.png)
-](../../assets/img/sebra/bottom_controls.png){: .spotlight}
+  ![img.png](/pages/sebra/bottom_controls.png)
+](/pages/sebra/bottom_controls.png){: .spotlight}
 
 * *Undo/Redo* : Отмяна/Повторение на действие
 * *Reset* : Отмяна на всички действия
@@ -160,8 +160,8 @@ lang: bg
 5. Избира се `Download all rows as a text file`
 
 [
-  ![img.png](../../assets/img/sebra/download_data.png)
-](../../assets/img/sebra/download_data.png){: .spotlight}
+  ![img.png](/pages/sebra/download_data.png)
+](/pages/sebra/download_data.png){: .spotlight}
 *Пример: Извличане на данните отговарящи на плащанията на НЗОК за месец август 2020 г.*
 
 # За Финал

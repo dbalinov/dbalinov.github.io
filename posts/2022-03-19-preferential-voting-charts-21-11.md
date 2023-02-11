@@ -11,24 +11,54 @@ lang: bg
 
 ## КП Продължаваме Промяната
 
-<div className="chart-container">
-  <div id="vis_2021_11_pp"></div>
-</div>
+```vega-lite
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "ПП ПП  - Разпределение на преференициалния вот - 14.11.2021",
+  "data": {
+    "url": "https://raw.githubusercontent.com/nikolatulechki/semanticElections/master/analysis/pref-viz/pp_2021_11.csv"
+  },
+  "width": 900,
+  "height": 900,
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "black",
+    "strokeWidth": 1,
+    "color": "#1e0985"
+  },
+  "encoding": {
+    "x": {
+      "field": "cand_number",
+      "type": "ordinal",
+      "axis": {"grid": false, "title": "Кандидат номер"}
+    },
+    "y": {"field": "mir_norm", "type": "ordinal", "axis": {"title": "МИР"} },
+    "size": {
+      "field": "pref_votes",
+      "type": "quantitative",
+      "scale": {"rangeMax": 5000}
+    },
+    "tooltip": [
+      {"field": "mir_norm", "type": "ordinal", "title": "МИР"},
+      {"field": "cand_number", "type": "ordinal", "title": "Номер"},
+      {"field": "name", "type": "nominal", "title": "Кандидат"},
+      {"field": "pref_votes", "type": "quantitative", "title": "Преференции"}
+    ],
+    "href": {"field": "link", "type": "nominal"}
+  },
+  "config": {"legend": {"disable": true} },
+}
+```
 
 # КП ГЕРБ - СДС
 
-<div className="chart-container">
-  <div id="vis_2021_11_gerb"></div>
-</div>
-
-
-
-<script type="text/javascript">
-var vlSpec = {
+```vega-lite
+{
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "",
+  "title": "ГЕРБ  - Разпределение на преференициалния вот - 14.11.2021",
   "data": {
-    "url": ""
+    "url": "https://raw.githubusercontent.com/nikolatulechki/semanticElections/master/analysis/pref-viz/gerb_2021_11.csv"
   },
   "width": 900,
   "height": 900,
@@ -45,7 +75,7 @@ var vlSpec = {
       "type": "ordinal",
       "axis": {"grid": false, "title": "Кандидат номер"}
     },
-    "y": {"field": "mir_norm", "type": "ordinal", "axis": {"title": "МИР"}},
+    "y": {"field": "mir_norm", "type": "ordinal", "axis": {"title": "МИР"} },
     "size": {
       "field": "pref_votes",
       "type": "quantitative",
@@ -59,28 +89,6 @@ var vlSpec = {
     ],
     "href": {"field": "link", "type": "nominal"}
   },
-  "config": {"legend": {"disable": true}}
+  "config": {"legend": {"disable": true} },
 }
-var urlbase = "https://raw.githubusercontent.com/nikolatulechki/semanticElections/master/analysis/pref-viz/"
-
-function init() {
-    var containers = document.getElementsByClassName('chart-container');
- 
-    vlSpec_2021_11_pp=JSON.parse(JSON.stringify(vlSpec));
-    vlSpec_2021_11_pp.title = "ПП ПП  - Разпределение на преференициалния вот - 14.11.2021" ;
-    vlSpec_2021_11_pp.data.url = urlbase+"pp_2021_11.csv" ;
-    vlSpec_2021_11_pp.mark.color = "#1e0985";  
-    
-    vegaEmbed('#vis_2021_11_pp', vlSpec_2021_11_pp);
-    
-    vlSpec_2021_11_gerb=JSON.parse(JSON.stringify(vlSpec));
-    vlSpec_2021_11_gerb.title = "ГЕРБ  - Разпределение на преференициалния вот - 14.11.2021" ;
-    vlSpec_2021_11_gerb.data.url = urlbase+"gerb_2021_11.csv" ;
-    vlSpec_2021_11_gerb.mark.color = "#2c92e6";  
-    
-    vegaEmbed('#vis_2021_11_gerb', vlSpec_2021_11_gerb);
-}
-
-init();
-window.addEventListener('resize', init);
-</script>
+```

@@ -16,17 +16,15 @@ export default function Markdown({ children }: any) {
         remarkMath
       ]}
       rehypePlugins={[
-        rehypeKatex,
-        rehypeRaw
+        rehypeRaw,
+        rehypeKatex
       ]}
       components={{
         a: A,
         code: Code,
         pre: Pre
       }}
-    >
-      {children}
-    </ReactMarkdown>
+    >{children}</ReactMarkdown>
   );
 };
 

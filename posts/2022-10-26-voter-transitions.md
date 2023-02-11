@@ -2,7 +2,7 @@
 title:  Политическите промени и преливането на гласовете (2017-2022)
 date: '2022-10-26T00:00:00'
 description: Как резултатите от изборите разкриват прехода на гласове от една партия в друга?
-featured_image: assets/img/voter-transitions.png
+featured_image: /pages/voter-transitions/voter-transitions.png
 author: Ivailo Partchev & Никола Тулечки
 lang: bg
 ---
@@ -11,7 +11,8 @@ lang: bg
 
 Обясним е интересът към тези движения, преливания, преразпределения на политическите предпочитания, които ни водят от една ситуация в друга. Анализите, които сме виждали публикувани досега, обикновено ползват анкетни данни.
 
-<div className="flourish-embed flourish-sankey" data-src="visualisation/11580691"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+<div className="flourish-embed flourish-sankey" data-src="visualisation/11580691"></div>
+<script src="https://public.flourish.studio/resources/embed.js"></script>
 
 Инфографиката, която са изработили Ивайло Парчев и Никола  Тулечки, се основава на друг подход: математически модел на официалните данни на ЦИК на равнище община от последните пет парламентарни избори. Подробностите са трудни за обяснение (специалистите могат да погледнат [тук](https://sci-hub.se/10.1287/mnsc.12.9.714)), но метаморфозите на гласовете могат да се проследят и без детайлни обяснения.
 
