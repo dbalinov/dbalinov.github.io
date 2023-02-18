@@ -11,7 +11,7 @@ export interface I18nProps {
   };
 }
 
-export function getConfig() {
+function getConfig() {
   return {
     locales: ["bg", "en"],
   };

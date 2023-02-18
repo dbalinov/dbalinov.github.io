@@ -1,27 +1,25 @@
 import { GetStaticPaths, GetStaticProps } from "next"
 import { useTranslation } from "react-i18next"
 import { getI18nPaths, getI18nProps } from "@/components/i18n-server";
-import { useRouter } from "next/router";
 import fs from 'fs'
 import matter from 'gray-matter'
-// import Image from 'next/image'
 import Link from '@/components/Link'
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
     fallback: false,
-    paths: getI18nPaths(),
+    paths: getI18nPaths()
   };
 };
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   
   const folder = "posts/"
   const files = fs.readdirSync(folder)
 
   // const postMetadata = getPostMetadata();
 
-  const posts = files.map((fileName) => {
+  const posts = files.map(fileName => {
     const slug = fileName.replace('.md', '');
     const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
     const { data: frontmatter } = matter(readFile);
@@ -44,9 +42,10 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   //     slug: fileName.replace(".md", "")
   //   }
   // });
+
   return {
     props: {
-      ...getI18nProps(ctx),
+      ...getI18nProps(context),
       posts,
     }
   };
@@ -54,38 +53,9 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 export default function Blog({ posts }: any) {
   const { t } = useTranslation("common");
-  const router = useRouter();
-  const { locale, locales, push } = useRouter()
-  const handleClick = (loc: string) => () => {
-    push('/', undefined, {locale: loc})
-  }
 
   return (
-    <>
-    <div>
-      <h3>With useRouter</h3>
-      <h1>Choose your locale:</h1>
-
-      {locales?.map(l => (
-        <button key={l} onClick={handleClick(l)}>
-          {l}
-        </button>
-      ))}
-    </div>
-    <h1>{locale}</h1>
-    <div>
-      <h3>With link</h3>
-      <h1>Choose your locale:</h1>
-
-      {locales?.map(l => (
-        <h4 key={l}>
-          <Link href={'/'} locale={l}>
-            {l}
-          </Link>
-        </h4>
-      ))}
-    </div>
-    <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0  mt-20'>
+    <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0'>
       {posts.map(({ slug, frontmatter }: any) => (
         <div
           key={slug}
@@ -103,6 +73,5 @@ export default function Blog({ posts }: any) {
         </div>
       ))}
     </div>
-    </>
   );
 }

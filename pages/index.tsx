@@ -1,10 +1,11 @@
 import { GetStaticProps } from "next"
-import { getConfig } from "@/components/i18n-server"
 import { useEffect } from "react"
 import { useRouter } from "next/router"
+import { getSettings } from "@/components/settings"
 
-export const getStaticProps: GetStaticProps = () => {
-  const { locales } = getConfig()
+export const  getStaticProps: GetStaticProps = async () => {
+  const { locales } = await getSettings()
+
   return {
     props: {
       locales

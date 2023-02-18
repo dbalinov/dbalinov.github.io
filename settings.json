@@ -1,0 +1,149 @@
+{
+  "locales": ["bg", "en"],
+  "email": "info@data-for-good.bg",
+  "people": {
+    "@nikola.tulechki": {
+      "picture": "/people/Nikola_Tulechki.png",
+      "bg": {
+        "name": "Никола Тулечки",
+        "facts": [
+          "Основател",
+          "Open Data enthusiast",
+          "Father of twins"
+        ]
+      },
+      "en": {
+        "name": "Nikola Tulechki",
+        "facts": [
+          "Founder",
+          "Open Data enthusiast",
+          "Father of twins"
+        ]
+      },
+      "contacts": {
+        "email": "nikola.tulechki@data-for-good.bg"
+      }
+    },
+    "@rumyana.tsoneva": {
+      "picture": "/people/Rumyana_Tsoneva.png",
+      "bg": {
+        "name": "Румяна Цонева",
+        "facts": [
+          "Съосновател",
+          "Data Scientist",
+          "Political economy enthusiast"
+        ]
+      },
+      "en": {
+        "name": "Rumyana Tsoneva",
+        "facts": [
+          "Co-Founder",
+          "Data Scientist",
+          "Political economy enthusiast"
+        ]
+      },
+      "contacts": {
+        "email": "rumyana.tsoneva@data-for-good.bg"
+      }
+    },
+    "@ivan.danielov": {
+      "picture": "/people/Ivan_Danielov.png",
+      "bg": {
+        "name": "Иван Даниелов",
+        "facts": [
+          "Съосновател",
+          "Data Scientist",
+          "Rock guitarist"
+        ]
+      },
+      "en": {
+        "name": "Ivan Danielov",
+        "facts": [
+          "Co-Founder",
+          "Data Scientist",
+          "Rock guitarist"
+        ]
+      },
+      "contacts": {
+        "email": "ivan.danielov@data-for-good.bg",
+        "linkedin": "https://www.linkedin.com/in/ivandanielov/"
+      }
+    },
+    "@elvan.aydemir": {
+      "picture": "/people/Elvan_Aydemir.png",
+      "bg": {
+        "name": "Елван Айдемир",
+        "facts": [
+          "Съосновател",
+          "Data Scientist",
+          "Nerd Climber"
+        ]
+      },
+      "en": {
+        "name": "Elvan Aydemir",
+        "facts": [
+          "Co-Founder",
+          "Data Scientist",
+          "Nerd Climber"
+        ]
+      },
+      "contacts": {
+        "email": "elvan.aydemir@data-for-good.bg",
+        "linkedin": "https://www.linkedin.com/in/aelvangunduz/"
+      }
+    },
+    "@magdalena.petrova": {
+      "picture": "/people/Magdalena_Petrova.png",
+      "bg": {
+        "name": "Магдалена Петрова",
+        "facts": [
+          "Съосновател",
+          "Data Viz Wiz",
+          "Traveler"
+        ]
+      },
+      "en": {
+        "name": "Magdalena Petrova",
+        "facts": [
+          "Co-Founder",
+          "Data Viz Wiz",
+          "Traveler"
+        ]
+      },
+      "contacts": {
+        "email": "magdalena.petrova@data-for-good.bg",
+        "linkedin": "https://www.linkedin.com/in/maggiepetrova/",
+        "twitter": "https://twitter.com/petrovamagi"
+      }
+    },
+    "@hristina.koleva": {
+      "picture": "/people/Hristina_Koleva.png",
+      "bg": {
+        "name": "Христина Танева",
+        "facts": [
+          "Мениджър проекти",
+          "Forecaster & Perfectionist",
+          "Passionate trip planner"
+        ]
+      },
+      "en": {
+        "name": "Hristina Taneva",
+        "facts": [
+          "Project Manager",
+          "Forecaster & Perfectionist",
+          "Passionate trip planner"
+        ]
+      },
+      "contacts": {
+        "email": "hristina.koleva@data-for-good.bg",
+        "linkedin": "https://www.linkedin.com/in/hristina-taneva-b8a54372"
+      }
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/dataforgoodbg",
+    "twitter": "https://twitter.com/dataforgoodbg",
+    "github": "https://github.com/data-for-good-bg",
+    "linkedin" : "https://www.linkedin.com/company/data-for-good-bg"
+  }
+}
