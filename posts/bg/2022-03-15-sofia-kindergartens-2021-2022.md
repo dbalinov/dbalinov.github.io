@@ -3,8 +3,7 @@ title:  Прием и посещаемост в общинските детск�
 date: '2022-03-15T00:00:00'
 description: Още веднъж за митовете и истинските проблеми на детските ясли и градини в Столична община.     
 featured_image: /pages/sofia-kindergartens/sofia-kindergartens-map.PNG
-author: Magdalena Petrova
-lang: bg
+author: magdalena.petrova
 ---
 
 [ ![](/see-data-button.PNG) ](https://data-for-good.bg/sofia-kindergartens)

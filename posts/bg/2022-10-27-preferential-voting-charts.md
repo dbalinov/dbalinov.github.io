@@ -3,7 +3,7 @@ title:  Парламентарни избори Октомври 2022 - преф
 date: '2022-10-27T00:00:00'
 description: Графики на преференциалния вот на парламентарните избори.
 featured_image: /pages/democracy/elections.png
-author: Никола Тулечки
+author: nikola.tulechki
 lang: bg
 ---
 

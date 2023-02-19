@@ -3,8 +3,7 @@ title: Admission to municipal kindergartens and nurseries in Sofia - infographic
 date: '2021-04-21T00:00:00'
 description: Informative diagrams and interactive maps about the free spaces and number of applicant children for kindergartens and nurseries in Sofia.
 featured_image: /pages/kindergartens-infographic/Sofia-kindergarten-admission-map.png
-author: Magdalena Petrova
-lang: en
+author: magdalena.petrova
 ---
 With the addition of criteria for settlement for the admission of children to kindergartens and nurseries many parents who have lived for over 3 years in Sofia hoped for a higher chance to get a place for their children in a kindergarten.
 The standard maximum number of points by general criteria this year is 13. However, is it enough to have 13 points for a child to be admitted to a kindergarten or a nursery in Sofia from the first round?

@@ -16,10 +16,6 @@ export default function Footer({ settings }: any) {
           <span className="self-center text-lg font-semibold whitespace-nowrap">{tCommon('title')}</span>
         </Link>
         <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0">
-
-          <li>
-            <Link href="/" className="mr-4 hover:underline md:mr-6">Privacy Policy</Link>
-          </li>
           <li>
             <Link href="/team" className="mr-4 hover:underline md:mr-6 ">{tMenu("team")}</Link>
           </li>

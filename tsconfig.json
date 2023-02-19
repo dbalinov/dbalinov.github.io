@@ -35,7 +35,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "app/posts/[slug]", "pages/posts/[slug].js", "pages/posts/[slug].js", "pages/._head.tsx", "pages/._head.tsx", "pages/._layout.tsx"  ],
+, "app/posts/[slug]", "pages/posts/[slug].js", "pages/posts/[slug].js", "pages/._head.tsx", "pages/._head.tsx", "pages/._layout.tsx", "components/Tableau.jsx"  ],
   "exclude": [
     "node_modules"
   ]

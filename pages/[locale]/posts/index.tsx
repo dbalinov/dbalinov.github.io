@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next"
-import { useTranslation } from "react-i18next"
-import { getI18nPaths, getI18nProps } from "@/components/i18n-server";
+import { getI18nPaths, getI18nProps } from "@/components/i18n-server"
 import fs from 'fs'
 import matter from 'gray-matter'
 import Link from '@/components/Link'
@@ -12,20 +11,21 @@ export const getStaticPaths: GetStaticPaths = () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  
-  const folder = "posts/"
+export const getStaticProps: GetStaticProps = async (context: any) => {
+  const { locale } = context.params
+
+  const folder = `posts/${locale}`
   const files = fs.readdirSync(folder)
 
   // const postMetadata = getPostMetadata();
 
   const posts = files.map(fileName => {
     const slug = fileName.replace('.md', '');
-    const readFile = fs.readFileSync(`posts/${fileName}`, 'utf-8');
+    const readFile = fs.readFileSync(`posts/${locale}/${fileName}`, 'utf-8');
     const { data: frontmatter } = matter(readFile);
     return {
       slug,
-      frontmatter,
+      frontmatter
     };
   });
 
@@ -52,8 +52,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export default function Blog({ posts }: any) {
-  const { t } = useTranslation("common");
-
   return (
     <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0'>
       {posts.map(({ slug, frontmatter }: any) => (

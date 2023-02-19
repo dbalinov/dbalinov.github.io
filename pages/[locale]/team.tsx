@@ -2,12 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next"
 import { useTranslation } from "react-i18next"
 import { getI18nPaths, getI18nProps } from "@/components/i18n-server";
 import { SocialIcon } from "react-social-icons"
-// import fs from 'fs';
-// import matter from 'gray-matter';
 import Image from 'next/image'
-// import { format, parseISO } from 'date-fns'
-// import { enGB, bg } from 'date-fns/locale'
-// import { getI18nPaths, getI18nProps } from "@/components/i18n-server";
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
@@ -49,7 +44,7 @@ export default function TeamPage({ _i18n, settings }: any) {
       </div>
       <article className="w-11/12 sm:w-3/4 m-auto prose prose-md sm:prose-lg">
         <div className="grid grid-cols-2 gap-4">
-          {Object.keys(people).map(key => {
+          {Object.keys(people).filter(key => people[key]?.isMember).map(key => {
             const person = people[key];
 
             return (<div className="max-w-sm rounded overflow-hidden shadow-lg" key={key}>
@@ -92,10 +87,9 @@ export default function TeamPage({ _i18n, settings }: any) {
                   }
                 })}
               </div>
-
               <div className="px-6 pb-2">
-                {person[locale].facts.map((fact: string) => (
-                  <span key={key} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{fact}</span>
+                {person[locale].facts.map((fact: string, index: number) => (
+                  <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{fact}</span>
                 ))}
               </div>
             </div>)

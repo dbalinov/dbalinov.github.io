@@ -13,13 +13,18 @@ export default function StaticI18nLink(
   const router = useRouter();
   const locale = props.locale || i18n.language || "";
 
+  const { name, slug } = router.query
+
   if (!locale) {
     const href = props.href || router.asPath;
     return <Link {...props} href={href}></Link>;
   } else {
     const href = props.href
       ? `/${locale}${props.href}`
-      : router.pathname.replace("[locale]", locale);
+      : router.pathname
+        .replace("[locale]", locale)
+        .replace("[name]", name + "")
+        .replace("[slug]", slug + "");
 
     return <Link {...props} href={href} locale={undefined}></Link>;
   }

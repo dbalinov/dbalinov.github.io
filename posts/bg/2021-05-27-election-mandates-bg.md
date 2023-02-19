@@ -3,8 +3,7 @@ title:  Избори 2021 - Рaзпределение на мандати без
 date: '2021-05-27T00:00:00'
 description: Симулация на окончателното разпределение на мандати след елиминиране на секциите с предполагаем рисков вот.      
 featured_image: /pages/election-mandates/Easily-accessible-linked-open-elections-data.png
-author: Никола Тулечки
-lang: bg
+author: nikola.tulechki
 ---
 
 ```vega-lite

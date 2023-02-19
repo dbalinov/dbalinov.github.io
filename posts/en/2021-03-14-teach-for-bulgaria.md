@@ -3,8 +3,7 @@ title: Teach for Bulgaria / Predicting teacher vacancies using statistical sampl
 date: '2021-03-14'
 description: Teach for Bulgaria supports educational teams  and builds partnerships for the introduction of good practices in the education system in the country. We helped them predict future teacher vacancies using statistical sampling techniques.
 featured_image: /pages/teach-for-bulgaria/school.jpg
-author: Magdalena Petrova
-lang: en
+author: magdalena.petrova
 ---
 
 #### About Teach for Bulgaria

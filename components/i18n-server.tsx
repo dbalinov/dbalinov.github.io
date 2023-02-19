@@ -25,9 +25,10 @@ export function getI18nPaths() {
   }));
 }
 
-export function getI18nProps(ctx: any): I18nProps {
+export function getI18nProps(context: any): I18nProps {
   const { locales } = getConfig();
-  const locale = ctx.params?.locale;
+
+  const locale = context.params?.locale;
   if (!locale || !locales.includes(locale)) {
     throw new Error(`Invalid locale ${locale}`);
   }

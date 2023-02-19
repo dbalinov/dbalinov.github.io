@@ -54,13 +54,13 @@ export default function Layout({ children, settings }: any) {
   const { t } = useTranslation("common");
 
   const title = t('title')
-  const description = "Create a fullstack application with multi-tenancy and custom domains support using Next.js, Prisma, and PostgreSQL";
+  // const description = "Create a fullstack application with multi-tenancy and custom domains support using Next.js, Prisma, and PostgreSQL";
   const icon = "/dfg_logo_16x16_hor.png"
 
   return (
     <>
       <Head>
-        <title>{title}</title>
+        {/* <title>{title}</title> */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={icon} />
         
@@ -79,7 +79,7 @@ export default function Layout({ children, settings }: any) {
         {/* <meta property="og:type" content="website" /> */}
 
         {/* <meta name="twitter:card" content="summary_large_image" /> */}
-        {/* <meta name="twitter:site" content="@Vercel" /> */}
+        <meta name="twitter:site" content="@dataforgoodbg" />
         {/* <meta name="twitter:creator" content="@StevenTey" /> */}
         {/* <meta name="twitter:title" content={title} /> */}
         {/* <meta name="twitter:description" content={description} /> */}

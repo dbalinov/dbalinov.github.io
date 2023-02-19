@@ -2,7 +2,7 @@
   "locales": ["bg", "en"],
   "email": "info@data-for-good.bg",
   "people": {
-    "@nikola.tulechki": {
+    "nikola.tulechki": {
       "picture": "/people/Nikola_Tulechki.png",
       "bg": {
         "name": "Никола Тулечки",
@@ -22,9 +22,10 @@
       },
       "contacts": {
         "email": "nikola.tulechki@data-for-good.bg"
-      }
+      },
+      "isMember": true
     },
-    "@rumyana.tsoneva": {
+    "rumyana.tsoneva": {
       "picture": "/people/Rumyana_Tsoneva.png",
       "bg": {
         "name": "Румяна Цонева",
@@ -44,9 +45,10 @@
       },
       "contacts": {
         "email": "rumyana.tsoneva@data-for-good.bg"
-      }
+      },
+      "isMember": true
     },
-    "@ivan.danielov": {
+    "ivan.danielov": {
       "picture": "/people/Ivan_Danielov.png",
       "bg": {
         "name": "Иван Даниелов",
@@ -67,9 +69,10 @@
       "contacts": {
         "email": "ivan.danielov@data-for-good.bg",
         "linkedin": "https://www.linkedin.com/in/ivandanielov/"
-      }
+      },
+      "isMember": true
     },
-    "@elvan.aydemir": {
+    "elvan.aydemir": {
       "picture": "/people/Elvan_Aydemir.png",
       "bg": {
         "name": "Елван Айдемир",
@@ -90,9 +93,10 @@
       "contacts": {
         "email": "elvan.aydemir@data-for-good.bg",
         "linkedin": "https://www.linkedin.com/in/aelvangunduz/"
-      }
+      },
+      "isMember": true
     },
-    "@magdalena.petrova": {
+    "magdalena.petrova": {
       "picture": "/people/Magdalena_Petrova.png",
       "bg": {
         "name": "Магдалена Петрова",
@@ -114,9 +118,10 @@
         "email": "magdalena.petrova@data-for-good.bg",
         "linkedin": "https://www.linkedin.com/in/maggiepetrova/",
         "twitter": "https://twitter.com/petrovamagi"
-      }
+      },
+      "isMember": true
     },
-    "@hristina.koleva": {
+    "hristina.koleva": {
       "picture": "/people/Hristina_Koleva.png",
       "bg": {
         "name": "Христина Танева",
@@ -137,7 +142,50 @@
       "contacts": {
         "email": "hristina.koleva@data-for-good.bg",
         "linkedin": "https://www.linkedin.com/in/hristina-taneva-b8a54372"
-      }
+      },
+      "isMember": true
+    },
+    "ognyana.hristova": {
+      "picture": null,
+      "bg": {
+        "name": "Огняна Христова",
+        "facts": []
+      },
+      "en": {
+        "name": "Ognyana Hristova",
+        "facts": []
+      },
+      "contacts": {
+      },
+      "isMember": false
+    },
+    "laura.tolosi": {
+      "picture": null,
+      "bg": {
+        "name": "Лаура Толоси",
+        "facts": []
+      },
+      "en": {
+        "name": "Laura Tolosi",
+        "facts": []
+      },
+      "contacts": {
+      },
+      "isMember": false
+    },
+    "ivailo.partchev": {
+      "picture": null,
+      "bg": {
+        "name": "Ивайло Партчев",
+        "facts": []
+      },
+      "en": {
+        "name": "Ivailo Partchev",
+        "facts": []
+      },
+      "contacts": {
+      },
+      "isMember": false
     }
   },
   "social": {
