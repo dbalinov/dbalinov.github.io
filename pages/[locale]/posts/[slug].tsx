@@ -12,20 +12,6 @@ import Author from './author'
 import Head from 'next/head'
 // import getPostMetadata from '@/components/getPostMetadata'
 
-// const getPostContent = (slug: string) => {
-//   const folder = "posts/"
-//   const file = `${folder}${slug}.md`;
-//   const content = fs.readFileSync(file, 'utf8');
-//   const matterResult = matter(content);
-
-//   return matterResult;
-// }
-
-// export const generateStaticParams = async () => {
-//   const posts = getPostMetadata();
-//   return posts.map(post => ({ slug: post.slug }))
-// }
-
 // : GetStaticPaths
 export async function getStaticPaths() {
   const paths = [];
@@ -75,30 +61,29 @@ export default function PostPage({ frontmatter, content, locale, settings }: any
     ? frontmatter.author
     : [frontmatter.author]
 
+  const image = `${process.env.NEXT_PUBLIC_HOST_URL}${featured_image}`
+
   return (
     <>
       <Head>
         <title>{title}</title>
 
-        <link rel="icon" href={featured_image} />
-        {/* <link rel="shortcut icon" type="image/x-icon" href={logo} /> */}
-        {/* <link rel="apple-touch-icon" sizes="180x180" href={logo} /> */}
-        {/* <meta name="theme-color" content="#7b46f6" /> */}
+        <link rel="icon" href={image} />
 
         <meta itemProp="name" content={title} />
         <meta itemProp="description" content={description} />
-        <meta itemProp="image" content={featured_image} />
+        <meta itemProp="image" content={image} />
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={featured_image} />
+        <meta property="og:image" content={image} />
         <meta property="og:type" content="article" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        {/* <meta name="twitter:creator" content="@StevenTey" /> */}
+        {/* <meta name="twitter:creator" content="@dataforgoodbg" /> */}
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={featured_image} />
+        <meta name="twitter:image" content={image} />
       </Head>
       <div className="mt-16">
         <div className="flex flex-col justify-center items-center">
