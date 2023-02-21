@@ -6,7 +6,10 @@ featured_image: /pages/sofia-kindergartens/sofia-kindergartens-map.PNG
 author: magdalena.petrova
 ---
 
-[ ![](/see-data-button.PNG) ](https://data-for-good.bg/sofia-kindergartens)
+<a href="/bg/sofia-kindergartens"
+  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded no-underline">
+  Виж данните
+</a>
 
 През 2021 г. „Данни за добро“ [представи данни](https://data-for-good.bg/blog/kindergartens-infographic-bg) за детските заведения в София и потърси отговор на някои наболели въпроси, като например колко точки са необходими за прием в яслите и детските градини, в кои столични райони има най-много и най-малко обявени свободни места и какви са шансовете за прием на децата според годината на тяхното раждане.
 
@@ -79,7 +82,10 @@ author: magdalena.petrova
 
 Получената информация ще ни послужи и да направим още един анализ, който ще представим съвсем скоро, а именно – на каква стойност би възлизала месечната такса за посещаване на детско заведение, ако родителите заплащаха изцяло размера на изплащаните им субсидии. 
 
-[ ![](/see-data-button.PNG) ](https://data-for-good.bg/sofia-kindergartens)
+<a href="/bg/sofia-kindergartens"
+  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded no-underline">
+  Виж данните
+</a>
 
 ### За „Данни за добро”
 „Данни за добро” е сдружение с нестопанска цел определено за осъществяване на общественополезна дейност. Ние създаваме общност от специалисти и съмишленици с опит в работата с данни, които да развиват значими за обществото проекти, както и да подпомагат активно организациите от неправителствения сектор да се справят с предизвикателствата чрез извличането на знание от данните.

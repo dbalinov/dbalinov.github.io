@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next"
+import Head from "next/head"
 import { getI18nPaths, getI18nProps } from "@/components/i18n-server"
 import fs from 'fs'
 import matter from 'gray-matter'
@@ -52,24 +53,48 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
 };
 
 export default function Blog({ posts }: any) {
+  const title = 'Блог'
+
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0'>
-      {posts.map(({ slug, frontmatter }: any) => (
-        <div
-          key={slug}
-          className='border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col'
-        >
-          <Link href={`/posts/${slug}`}>
-            {/* <Image
-              width={650}
-              height={340}
-              alt={frontmatter.title}
-              src={`/${frontmatter.socialImage}`}
-            /> */}
-            <h1 className='p-4'>{frontmatter.title}</h1>
-          </Link>
-        </div>
-      ))}
-    </div>
+    <>
+      <Head>
+        <title>{title}</title>
+
+        {/* <link rel="icon" href={image} /> */}
+
+        <meta itemProp="name" content={title} />
+        {/* <meta itemProp="description" content={description} /> */}
+        {/* <meta itemProp="image" content={image} /> */}
+        {/* <meta name="description" content={description} /> */}
+        <meta property="og:title" content={title} />
+        {/* <meta property="og:description" content={description} /> */}
+        {/* <meta property="og:image" content={image} /> */}
+        <meta property="og:type" content="article" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        {/* <meta name="twitter:creator" content="@dataforgoodbg" /> */}
+        <meta name="twitter:title" content={title} />
+        {/* <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} /> */}
+      </Head>
+      <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-0'>
+        {posts.map(({ slug, frontmatter }: any) => (
+          <div
+            key={slug}
+            className='border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col'
+          >
+            <Link href={`/posts/${slug}`}>
+              {/* <Image
+                width={650}
+                height={340}
+                alt={frontmatter.title}
+                src={`/${frontmatter.socialImage}`}
+              /> */}
+              <h1 className='p-4'>{frontmatter.title}</h1>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

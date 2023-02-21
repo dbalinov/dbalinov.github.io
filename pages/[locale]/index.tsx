@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next"
+import Head from "next/head"
 import { useTranslation } from "react-i18next"
 import { getI18nPaths, getI18nProps } from "@/components/i18n-server"
 
@@ -19,6 +20,27 @@ export default function Home(props: any) {
   const { t } = useTranslation("home");
   return (
     <>
+      <Head>
+        <title>{t('title')}</title>
+        {/*
+
+        <link rel="icon" href={image} />
+
+        <meta itemProp="name" content={title} />
+        <meta itemProp="description" content={description} />
+        <meta itemProp="image" content={image} />
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:type" content="article" /> */}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        {/* <meta name="twitter:creator" content="@dataforgoodbg" /> */}
+        {/* <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} /> */}
+      </Head>
       <div className="mt-8">
         <div className="flex flex-col justify-center items-center">
           <div className="text-center w-full md:w-7/12 m-auto">
