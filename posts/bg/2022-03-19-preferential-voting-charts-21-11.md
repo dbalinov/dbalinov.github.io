@@ -10,7 +10,7 @@ author: nikola.tulechki
 
 ## КП Продължаваме Промяната
 
-```vega-lite
+```json:vega-lite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "ПП ПП  - Разпределение на преференициалния вот - 14.11.2021",
@@ -52,7 +52,7 @@ author: nikola.tulechki
 
 # КП ГЕРБ - СДС
 
-```vega-lite
+```json:vega-lite
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "ГЕРБ  - Разпределение на преференициалния вот - 14.11.2021",

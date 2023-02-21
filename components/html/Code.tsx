@@ -2,15 +2,15 @@ import { VegaLite, Vega } from 'react-vega'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 
 export default function Code({node, inline, className, children, ...props}: any) {
-  if (className == 'language-vega') {
+  if (className?.indexOf('vega-lite') > - 1) {
     return (
-      <Vega spec={eval("(" + children + ')')} />
+      <VegaLite spec={eval("(" + children + ')')} />
     );
   }
 
-  if (className == 'language-vega-lite') {
+  if (className?.indexOf('vega') > - 1) {
     return (
-      <VegaLite spec={eval("(" + children + ')')} />
+      <Vega spec={eval("(" + children + ')')} />
     );
   }
 
