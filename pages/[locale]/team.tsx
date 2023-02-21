@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 import { getI18nPaths, getI18nProps } from "@/components/i18n-server";
 import { SocialIcon } from "react-social-icons"
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
@@ -75,7 +76,11 @@ export default function TeamPage({ _i18n, settings }: any) {
               return (<div className="max-w-sm rounded overflow-hidden shadow-lg" key={key}>
                 <Image className="w-full" src={person.picture} width={200} height={200} alt="Sunset in the mountains" />
                 <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">{person[locale].name}</div>
+                  <div className="font-bold text-xl mb-2">
+                    <Link href={`/${locale}/author/${key}`}>
+                      {person[locale].name}
+                    </Link>
+                  </div>
                 </div>
 
                 <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
