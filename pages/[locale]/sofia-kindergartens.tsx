@@ -2,6 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next"
 import Head from "next/head"
 import { useTranslation } from "react-i18next"
 import { getI18nPaths, getI18nProps } from "@/components/i18n-server";
+import { Tableau } from "@/components/Tableau";
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
@@ -18,7 +19,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-export default function Sebra({ settings }: any) {
+export default function SofiaKindergartens({ settings }: any) {
   const { t } = useTranslation("sebra");
 
   const title = 'Посещаемост в детските ясли и градини в София през учебната 2021/2022 година'
@@ -46,15 +47,16 @@ export default function Sebra({ settings }: any) {
         {/* <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} /> */}
       </Head>
-    <div className="mt-8">
+    <div>
       <div className="flex flex-col justify-center items-center">
         <div className="text-center w-full md:w-7/12 m-auto">
-          <h1 className="font-bold text-3xl font-cal md:text-6xl mb-10 text-gray-800">
+          <h1 className="font-bold text-3xl font-cal md:text-6xl mb-10 text-black">
             {title}
           </h1>
         </div>
       </div>
       <article className="w-11/12 sm:w-3/4 m-auto prose prose-md sm:prose-lg">
+        <Tableau url="https://public.tableau.com/views/SofiaKindergartens20212022/SofiaKindergartens" />
 {/* 
       <body onload="ChangeClass(); initViz();">
 

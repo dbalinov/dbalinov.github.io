@@ -1,4 +1,5 @@
 import fs from "fs";
+import { FileService } from "@/services"
 import path from "path";
 
 const localeDir = "locales/";

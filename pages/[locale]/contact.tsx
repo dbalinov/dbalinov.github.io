@@ -43,10 +43,10 @@ export default function Contact({ settings }: any) {
         {/* <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} /> */}
       </Head>
-      <div className="mt-8">
+      <div>
         <div className="flex flex-col justify-center items-center">
           <div className="text-center w-full md:w-7/12 m-auto">
-            <h1 className="font-bold text-3xl font-cal md:text-6xl mb-10 text-gray-800">
+            <h1 className="font-bold text-3xl font-cal md:text-6xl mb-10 text-black">
               {title}
             </h1>
           </div>

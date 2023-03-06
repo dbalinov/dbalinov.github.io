@@ -3,7 +3,7 @@
   "email": "info@data-for-good.bg",
   "people": {
     "nikola.tulechki": {
-      "picture": "/people/Nikola_Tulechki.png",
+      "picture": "/people/Nikola_Tulechki-100.png",
       "bg": {
         "name": "Никола Тулечки",
         "facts": [
@@ -26,7 +26,7 @@
       "isMember": true
     },
     "rumyana.tsoneva": {
-      "picture": "/people/Rumyana_Tsoneva.png",
+      "picture": "/people/Rumyana_Tsoneva-100.png",
       "bg": {
         "name": "Румяна Цонева",
         "facts": [
@@ -49,7 +49,7 @@
       "isMember": true
     },
     "ivan.danielov": {
-      "picture": "/people/Ivan_Danielov.png",
+      "picture": "/people/Ivan_Danielov-100.png",
       "bg": {
         "name": "Иван Даниелов",
         "facts": [
@@ -73,7 +73,7 @@
       "isMember": true
     },
     "elvan.aydemir": {
-      "picture": "/people/Elvan_Aydemir.png",
+      "picture": "/people/Elvan_Aydemir-100.png",
       "bg": {
         "name": "Елван Айдемир",
         "facts": [
@@ -97,7 +97,7 @@
       "isMember": true
     },
     "magdalena.petrova": {
-      "picture": "/people/Magdalena_Petrova.png",
+      "picture": "/people/Magdalena_Petrova-100.png",
       "bg": {
         "name": "Магдалена Петрова",
         "facts": [
@@ -122,7 +122,7 @@
       "isMember": true
     },
     "hristina.koleva": {
-      "picture": "/people/Hristina_Koleva.png",
+      "picture": "/people/Hristina_Koleva-100.png",
       "bg": {
         "name": "Христина Танева",
         "facts": [

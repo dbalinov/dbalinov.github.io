@@ -2,6 +2,8 @@ import { GetStaticPaths, GetStaticProps } from "next"
 import Head from "next/head"
 import { useTranslation } from "react-i18next"
 import { getI18nPaths, getI18nProps } from "@/components/i18n-server"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLightbulb, faCube, faTruckRampBox, faBook, faTree, faPeopleGroup } from '@fortawesome/free-solid-svg-icons'
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
@@ -10,9 +12,9 @@ export const getStaticPaths: GetStaticPaths = () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   return {
-    props: getI18nProps(ctx),
+    props: getI18nProps(context),
   };
 }
 
@@ -41,10 +43,10 @@ export default function Home(props: any) {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} /> */}
       </Head>
-      <div className="mt-8">
+      <div>
         <div className="flex flex-col justify-center items-center">
           <div className="text-center w-full md:w-7/12 m-auto">
-            <h1 className="font-bold text-3xl font-cal md:text-6xl mb-10 text-gray-800">
+            <h1 className="font-bold text-3xl font-cal md:text-6xl mb-10">
               {t('title')}
             </h1>
             <p>{t("description")}</p>
@@ -97,33 +99,33 @@ export default function Home(props: any) {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="info info-horizontal info-hover-primary">
-                    <div className="icon icon-shape icon-shape-info rounded-circle text-white">
-                      <i className="ni ni-bulb-61 text-info"></i>
-                    </div>
+                    {/* <div className="icon icon-shape icon-shape-info rounded-circle"> */}
+                      <FontAwesomeIcon icon={faLightbulb} width="22" />
+                    {/* </div> */}
                     <div className="description pl-4">
                       <h5 className="title">{t("ourProcess.step1.title")}</h5>
                       <p>{t("ourProcess.step1.description")}</p>
-                      {/* <!-- <a className="text-info">Learn more</a> --> */}
                     </div>
                   </div>
                   <div className="info info-horizontal info-hover-primary">
-                    <div className="icon icon-shape icon-shape-info rounded-circle text-white">
-                      <i className="ni ni-app text-info"></i>
-                    </div>
+                    {/* <div className="icon icon-shape icon-shape-info rounded-circle text-white"> */}
+                      <FontAwesomeIcon icon={faCube} width="22" />
+                      {/* <i className="ni ni-app text-info"></i> */}
+                    {/* </div> */}
                     <div className="description pl-4">
                       <h5 className="title">{t("ourProcess.step2.title")}</h5>
                       <p>{t("ourProcess.step2.description")}</p>
-                      {/* <!-- <a className="text-info">Learn more</a> --> */}
                     </div>
                   </div>
                   <div className="info info-horizontal info-hover-primary">
-                    <div className="icon icon-shape icon-shape-info rounded-circle text-white">
-                      <i className="ni ni-delivery-fast text-info"></i>
-                    </div>
+                    {/* <div className="icon icon-shape icon-shape-info rounded-circle text-white"> */}
+                      <FontAwesomeIcon icon={faTruckRampBox} width="22" />
+                      {/* <i className="ni ni-delivery-fast text-info"></i>
+                      <i class="fa-solid fa-truck-ramp-box"></i> */}
+                    {/* </div> */}
                     <div className="description pl-4">
                       <h5 className="title">{t("ourProcess.step3.title")} </h5>
                       <p>{t("ourProcess.step3.description")}</p>
-                      {/* <!-- <a className="text-info">Learn more</a> --> */}
                     </div>
                   </div>
                 </div>
@@ -145,9 +147,10 @@ export default function Home(props: any) {
               <div className="row">
                 <div className="col-md-4">
                   <div className="info">
-                    <div className="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle">
-                      <i className="fa fa-book"></i>
-                    </div>
+                    {/* <div className="icon icon-lg icon-shape icon-shape-primary shadow rounded-circle"> */}
+                      {/* <i className="fa fa-book"></i> */}
+                      <FontAwesomeIcon icon={faBook} width="22" />
+                    {/* </div> */}
                     <h6 className="info-title text-uppercase text-primary">{t("areasOfActivity.education.title")}</h6>
                     <p className="description opacity-8">{t("areasOfActivity.education.description")}</p>
                     {/* <a className="text-primary">Нашият принос към образованието
@@ -157,9 +160,10 @@ export default function Home(props: any) {
                 </div>
                 <div className="col-md-4">
                   <div className="info">
-                    <div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle">
-                      <i className="fa fa-tree"></i>
-                    </div>
+                    {/* <div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle"> */}
+                      <FontAwesomeIcon icon={faTree} width="22" />
+                      {/* <i className="fa fa-tree"></i> */}
+                    {/* </div> */}
                     <h6 className="info-title text-uppercase text-success">{t("areasOfActivity.environment.title")}</h6>
                     <p className="description opacity-8">{t("areasOfActivity.environment.description")}</p>
                     {/* <!-- <a className="text-primary">Нашият принос към околната среда
@@ -169,9 +173,10 @@ export default function Home(props: any) {
               </div>
               <div className="col-md-4">
                 <div className="info">
-                  <div className="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle">
-                    <i className="fa fa-group"></i>
-                  </div>
+                  {/* <div className="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle"> */}
+                    <FontAwesomeIcon icon={faPeopleGroup} width="22" />
+                    {/* <i className="fa fa-group"></i> */}
+                  {/* </div> */}
                   <h6 className="info-title text-uppercase text-warning">{t("areasOfActivity.democracy.title")}</h6>
                   <p className="description opacity-8">{t("areasOfActivity.democracy.description")}</p>
                   {/* <!-- <a className="text-primary">Нашият принос към демокрацията

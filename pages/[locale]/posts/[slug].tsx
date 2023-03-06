@@ -1,5 +1,5 @@
-import { GetStaticPaths, GetStaticProps } from "next"
-import fs from 'fs';
+// import { GetStaticPaths, GetStaticProps } from "next"
+import { FileService } from "@/services"
 import matter from 'gray-matter';
 import Image from 'next/image';
 import Markdown from '@/components/Markdown';
@@ -10,7 +10,6 @@ import { getI18nPaths, getI18nProps } from "@/components/i18n-server";
 import Link from '@/components/Link'
 import Author from './author'
 import Head from 'next/head'
-// import getPostMetadata from '@/components/getPostMetadata'
 
 // : GetStaticPaths
 export async function getStaticPaths() {
@@ -19,7 +18,7 @@ export async function getStaticPaths() {
   //paths: getI18nPaths(),
 
   for (const locale of ['bg', 'en']) {
-    const posts = fs.readdirSync(`posts/${locale}`);
+    const posts = await FileService.readDir(`posts/${locale}`);
     for (const fileName of posts) {
       paths.push({
         params: {
@@ -40,7 +39,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context: any) {
   const { params: { locale, slug } } = context
 
-  const fileName = fs.readFileSync(`posts/${locale}/${slug}.md`, 'utf-8');
+  const fileName = await FileService.readFile(`posts/${locale}/${slug}.md`);
   const { data: frontmatter, content } = matter(fileName)
   return {
     props: {
@@ -85,42 +84,40 @@ export default function PostPage({ frontmatter, content, locale, settings }: any
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
       </Head>
-      <div className="mt-16">
-        <div className="flex flex-col justify-center items-center">
-          <div className="text-center w-full md:w-7/12 m-auto">
-            <p className="text-sm md:text-base font-light text-gray-500 w-10/12 m-auto mt-10 mb-5">
-              { format(parseISO(frontmatter.date), 'dd MMMM yyyy', { locale: dateLocale }) }
-            </p>
-            <h1 className="font-bold text-3xl font-cal md:text-6xl mb-10 text-gray-800">
-              {title}
-            </h1>
-            <p className="text-md md:text-lg text-gray-600 w-10/12 m-auto">
-              {description}
-            </p>
-          </div>
-          <div className="my-8 flex">
-            <div className="inline-block text-md md:text-lg align-middle ml-3">
-              <span className="font-semibold">{t('by')}</span>
-            </div>
-            {authors.map((author: string) => (
-              <Link href={`/author/${author}`} key={author}>
-                <Author person={settings.people[author]} locale={locale} />
-              </Link>))}
-          </div>
+      <div className="flex flex-col justify-center items-center">
+        <div className="text-center w-full md:w-7/12 m-auto">
+          <p className="text-sm md:text-base font-light text-gray-800 w-10/12 m-auto mt-10 mb-5">
+            { format(parseISO(frontmatter.date), 'dd MMMM yyyy', { locale: dateLocale }) }
+          </p>
+          <h1 className="font-bold text-3xl font-cal md:text-6xl mb-10 text-black">
+            {title}
+          </h1>
+          <p className="text-md md:text-lg text-gray-800 w-10/12 m-auto">
+            {description}
+          </p>
         </div>
-        <div className="relative h-104 md:h-158 w-full max-w-screen-lg lg:w-2/3 md:w-5/6 m-auto mb-10 md:mb-20 md:rounded-2xl overflow-hidden">
-          <Image
-            width={1200}
-            height={630}
-            alt={frontmatter.title}
-            src={frontmatter.featured_image}
-            className="w-full h-full object-cover duration-700 ease-in-out grayscale-0 blur-0 scale-100"
-          />
+        <div className="my-8 flex align-middle">
+          <div className="text-md md:text-lg self-center ml-3">
+            {t('by')}
+          </div>
+          {authors.map((author: string) => (
+            <Link href={`/author/${author}`} key={author}>
+              <Author person={settings.people[author]} locale={locale} />
+            </Link>))}
         </div>
-        <article className="w-11/12 sm:w-3/4 m-auto prose prose-md sm:prose-lg">
-          <Markdown className="prose lg:prose-xl">{content}</Markdown>
-        </article>
       </div>
+      <div className="relative h-104 md:h-158 w-full max-w-screen-lg lg:w-2/3 md:w-5/6 m-auto mb-10 md:mb-20 md:rounded-2xl overflow-hidden">
+        <Image
+          width={1200}
+          height={630}
+          alt={frontmatter.title}
+          src={frontmatter.featured_image}
+          className="w-full h-full object-cover duration-700 ease-in-out grayscale-0 blur-0 scale-100"
+        />
+      </div>
+      <article className="w-11/12 sm:w-3/4 m-auto prose prose-md sm:prose-lg">
+        <Markdown className="prose lg:prose-xl">{content}</Markdown>
+      </article>
     </>
   );
 }

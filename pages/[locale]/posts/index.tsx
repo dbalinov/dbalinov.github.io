@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next"
 import Head from "next/head"
 import { getI18nPaths, getI18nProps } from "@/components/i18n-server"
-import fs from 'fs'
+import { FileService } from "@/services"
 import matter from 'gray-matter'
 import Link from '@/components/Link'
 
@@ -16,13 +16,11 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
   const { locale } = context.params
 
   const folder = `posts/${locale}`
-  const files = fs.readdirSync(folder)
+  const files = await FileService.readDir(folder)
 
-  // const postMetadata = getPostMetadata();
-
-  const posts = files.map(fileName => {
+  const posts = files.map(async fileName => {
     const slug = fileName.replace('.md', '');
-    const readFile = fs.readFileSync(`posts/${locale}/${fileName}`, 'utf-8');
+    const readFile = await FileService.readFile(`posts/${locale}/${fileName}`);
     const { data: frontmatter } = matter(readFile);
     return {
       slug,
@@ -33,7 +31,7 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
   // const markdownPosts = files.filter(file => file.endsWith(".md"))
 
   // const posts = markdownPosts.map((fileName) => {
-  //   const fileContents = fs.readFileSync(`posts/${fileName}`, 'utf8')
+  //   const fileContents = await FileService.readFile(`posts/${fileName}`)
   //   const matterResult = matter(fileContents);
 
   //   return {
@@ -47,7 +45,7 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
   return {
     props: {
       ...getI18nProps(context),
-      posts,
+      posts: await Promise.all(posts),
     }
   };
 };
